@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CreateTask from './CreateTask'
+import CreateTask from "./CreateTask";
 import TaskList from "./TaskList";
 import * as C from "../constants";
 import "../index.css";
@@ -45,14 +45,15 @@ class TaskPage extends React.Component {
   }
 
   render() {
-    const form = this.state.create ? <CreateTask onCreateTask={this.onCreateTask} /> : null;
+    const form = this.state.create ? (
+      <CreateTask onCreateTask={this.onCreateTask} />
+    ) : null;
 
     return (
       <div className="task-lists">
         <div className="task-list">
           <button className="button button-info" onClick={this.onToggleForm}>
-            {" "}
-            new task{" "}
+            new task
           </button>
           {form}
         </div>

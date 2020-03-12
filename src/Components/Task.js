@@ -5,7 +5,7 @@ import '../index.css';
 
 const Task = (props) => {
   function onChangeselect(event) {
-    props.onChangeStatus( props.task.id, event.target.value)
+    props.onChangeStatus( props.task.id, props.task.title, props.task.description, event.target.value)
   }
   function onRemove() {
     props.onRemoveTask( props.task.id)

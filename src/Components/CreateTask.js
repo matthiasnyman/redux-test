@@ -41,7 +41,7 @@ class CreateTask extends React.Component {
       <form onSubmit={this.onSubmit}>
         <input type="text" onChange={this.onTitleChange} value={this.state.title}  />
         <input type="text" onChange={this.onDescriptionChange} value={this.state.description} />
-        <button type="submit"> Save </button>
+        <button type="submit" className="button"> Save </button>
       </form>
     )
   }
